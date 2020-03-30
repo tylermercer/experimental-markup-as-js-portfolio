@@ -26,6 +26,8 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
-    "markup-as-js": "^1.2.0"
+    "@types/page": "^1.8.0",
+    "markup-as-js": "^1.2.0",
+    "page": "^1.11.5"
   }
 }

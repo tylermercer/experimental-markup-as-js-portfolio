@@ -1,17 +1,22 @@
-import { h1, h2, header, p, nav, a, ul, li, b } from 'markup-as-js';
+import App from './App';
+import page from 'page';
+import routes from './routes';
 
-const app = header(
-  nav(
-    h2(a({href: "/"}, "Tyler Mercer")),
-    ul(
-      li(a({href: "/"}, "Home")),
-      li(a({href: "/projects"}, "Projects")),
-      li(a({href: "/blog"}, "Blog")),
-    )
-  ),
-  h1("Tyler Mercer"),
-  p("Humanistic Software Engineer"),
-  p(a({href: "/projects"}, b("View my projects")))
-);
+const app = App();
 
 document.getElementById("app")?.appendChild(app);
+
+let routeNode: Element = document.getElementById("route") as Element;
+
+if (!routeNode) console.error("No #route element found");
+
+if (routeNode) {
+  for (let route of routes) {
+    page(route.path, () => {
+      let newNode = route.builder();
+      routeNode.parentElement?.replaceChild(newNode, routeNode);
+      routeNode = newNode;
+    });
+  }
+}
+page();
