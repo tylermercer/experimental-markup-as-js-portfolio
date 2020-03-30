@@ -4,21 +4,29 @@ import Projects from './routes/ProjectsPage';
 
 type Route = {
   path: string,
-  builder: () => Element
+  label: string,
+  builder: () => Element,
+  nav: boolean
 }
 
 const routes: Route[] = [
   {
     path: '/',
-    builder: Main
+    label: 'Home',
+    builder: Main,
+    nav: true,
   },
   {
     path: '/blog',
-    builder: Blog
+    label: 'Blog',
+    builder: Blog,
+    nav: false
   },
   {
     path: '/projects',
-    builder: Projects
+    label: 'Projects',
+    builder: Projects,
+    nav: true
   },
 ];
 

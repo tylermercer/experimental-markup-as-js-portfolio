@@ -1,12 +1,11 @@
-import { h1, h2, header, p, nav, a, ul, li, b, div } from 'markup-as-js';
+import { h2, header, nav, a, ul, li, div } from 'markup-as-js';
+import routes from './routes';
 
 const App = () => div(
   header(nav(
     h2(a({href: "/"}, "Tyler Mercer")),
     ul(
-      li(a({href: "/"}, "Home")),
-      li(a({href: "/projects"}, "Projects")),
-      li(a({href: "/blog"}, "Blog")),
+      ...routes.filter(r => r.nav).map(r => li(a({href:r.path}, r.label)))
     )
   )),
   div({id: "route"})
