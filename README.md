@@ -1,6 +1,6 @@
-# Conversation Prompt Generator
+# Personal Website
 
-In our current (as of Mar 2020) state of widespread social isolation in response to COVID-19, many people are experiencing profound loneliness. This web app aims to help alleviate that, by providing questions to help you have meaningful conversations, even over a video call or text message conversation.
+My personal website
 
 ## Building
 
