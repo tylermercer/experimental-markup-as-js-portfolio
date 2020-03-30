@@ -19,3 +19,7 @@
   --width-card-wide: 800px;
   --width-content: 1080px;
 } 
+
+.active {
+  text-decoration: underline;
+}

@@ -5,7 +5,7 @@ import Projects from './routes/ProjectsPage';
 type Route = {
   path: string,
   label: string,
-  builder: () => Element,
+  builder: (ctx: PageJS.Context, next: () => any) => Element,
   nav: boolean
 }
 

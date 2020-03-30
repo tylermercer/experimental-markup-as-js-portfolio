@@ -1,4 +1,4 @@
-import { section, h1, p, a, b, header } from "markup-as-js"
+import { section, h1, p, a, b, header, Observable } from "markup-as-js"
 
 const Main = () => section(
   header(
