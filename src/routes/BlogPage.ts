@@ -1,5 +1,5 @@
-import { h1 } from 'markup-as-js';
+import { h1, section, header } from 'markup-as-js';
 
-const BlogPage = () => h1("Blog");
+const BlogPage = () => section(header(h1("Blog")));
 
 export default BlogPage;
