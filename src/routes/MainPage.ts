@@ -1,9 +1,11 @@
-import { div, h1, p, a, b } from "markup-as-js"
+import { section, h1, p, a, b, header } from "markup-as-js"
 
-const Main = () => div(
-  h1("Tyler Mercer"),
-  p("Humanistic Software Engineer"),
-  p(a({href: "/projects"}, b("View my projects")))
+const Main = () => section(
+  header(
+    h1("Tyler Mercer"),
+    p("Humanistic Software Engineer"),
+    p(a({href: "/projects"}, b("View my projects")))
+  )
 );
 
 export default Main;
