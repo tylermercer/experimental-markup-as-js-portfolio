@@ -17,15 +17,15 @@ const routes: Route[] = [
     nav: true,
   },
   {
-    path: '/blog',
-    label: 'Blog',
-    builder: Blog,
-    nav: false
-  },
-  {
     path: '/projects',
     label: 'Projects',
     builder: Projects,
+    nav: true
+  },
+  {
+    path: '/blog',
+    label: 'Blog',
+    builder: Blog,
     nav: true
   },
 ];
