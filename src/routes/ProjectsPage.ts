@@ -13,9 +13,9 @@ const getProjects = () => fetch(QUERY)
   .then(repos => section(
     ...repos.filter((r:any) => r.description).map((r:any) => aside(
       h3(a({href: r.homepage || r.html_url, target: "_blank"}, prettify(r.name))),
+      p(small(r.language)),
       p((r.description || "")),
       p(a({href:r.html_url}, "View on GitHub")),
-      p(small(r.language))
     ))
   ));
 
