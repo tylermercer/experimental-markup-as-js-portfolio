@@ -1,3 +1,6 @@
+# DEPRECATED 
+New personal website repo is [tylermercer/website](https://github.com/tylermercer/website)
+--------
 # Personal Website
 
 My personal website
