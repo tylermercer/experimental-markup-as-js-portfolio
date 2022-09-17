@@ -4,7 +4,7 @@ const QUERY = 'https://api.github.com/users/tylermercer/repos?sort=pushed&direct
 
 const prettify = (name: string) => {
   return name.replace(/-/g, " ").replace(/\w\S*/g, (txt:string) =>{
-    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    return txt.charAt(0).toUpperCase() + txt.substring(1).toLowerCase();
   });
 }
 
